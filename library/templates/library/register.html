@@ -1,0 +1,18 @@
+{% extends 'library/index.html'%}
+{% block title %}Register{% endblock %}
+{% block content %}
+<form method="POST" action="{% url 'register'%}">
+    {% csrf_token %}
+        {{form.book_id.label}}
+        {{form.book_id}}
+        {{form.name.label}}
+        {{form.name}}
+        {{form.author.label}}
+        {{form.author}}
+        {{form.price.label}}
+        {{form.price}}
+        {{form.type.label}}
+        {{form.type}}
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'library/index.html'%}
+{% block title %}Borrow{% endblock %}
+{% block content %}
+<form method="POST" action="{% url 'borrow'%}">
+    {% csrf_token %}
+        {{form.student_name.label}}
+        {{form.student_name}}
+        {{form.student_id.label}}
+        {{form.student_id}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
